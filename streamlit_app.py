@@ -149,9 +149,7 @@ with col3:
 with col4:
     if st.button("🗺️", key="map_button"):
         st.session_state.button_clicks["map"] = True
-    if st.session_state.button_clicks["map"]:
-        st.write("Map button clicked!")
-        st.session_state.button_clicks["map"] = False
+        st.markdown(f'<meta http-equiv="refresh" content="0; url=./map_page.py" />', unsafe_allow_html=True)
 
 with col5:
     if st.button("👤", key="person_button"):
