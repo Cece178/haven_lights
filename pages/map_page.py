@@ -3,6 +3,9 @@ import streamlit.components.v1 as components  # For embedding HTML/JavaScript
 from streamlit_extras.switch_page_button import switch_page  # For navigation
 from PIL import Image  # For image handling
 
+st.title ("Map Page")
+st.write("This is the map page.")  
+
 
 def map_page():
     """Creates the map page with title, icons, map, and bottom navigation."""
