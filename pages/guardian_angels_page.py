@@ -78,15 +78,4 @@ with col5:
         st.session_state.current_page = "person"
         st.rerun()
 st.markdown('</div>', unsafe_allow_html=True)  # Close the bottom nav container
-
-if st.session_state.current_page == "home":
-    st.Page("main_app/streamlit_app.py")
-elif st.session_state.current_page == "wings":
-    st.Page("guardian_angels_page.py")
-elif st.session_state.current_page == "exclamation":
-    st.header("Exclamation Page")
-elif st.session_state.current_page == "map":
-    st.header("Map Page")
-if st.session_state.current_page == "person":
-    st.Page("messages.py")
 #end of Gemini code
