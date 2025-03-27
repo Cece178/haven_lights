@@ -1,7 +1,7 @@
 import streamlit as st #start of my code (with some guidance from Gemini)
 
 st.markdown("<h1 style='text-align: center; margin-bottom: 0.001em'>Your Guardian Angels</h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center;'>Meet your angels!</h2>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Meet your angels!</h2>", unsafe_allow_html=True)
 
 st.markdown("<p style='text-align: center; margin-bottom: 0.01em'>Your primary angels are marked with a 💖</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; margin-top: 0.01em'>All other angels are 🪽</p>", unsafe_allow_html=True)
