@@ -24,7 +24,6 @@ with st.sidebar:
         st.page_link("pages/map_page.py")
     if selected == "Profile":
         st.page_link("pages/disguise_home_page.py")
-
 #end of video code
 
 #my code
