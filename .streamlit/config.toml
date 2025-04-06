@@ -1,0 +1,15 @@
+# Dark Mode Theme
+[theme]
+primaryColor = "#F1587D"  # Pink
+backgroundColor = "#17040A" # Dark Red
+secondaryBackgroundColor = "#370A18" # Dark Pink
+textColor = "#f698A3"  # Light pink
+font = "sans serif"
+
+# Light Mode Theme (commented out for now)
+# [theme]
+# primaryColor = "#F1587D"  # Pink
+# backgroundColor = "#FFE7EA"  # Light pink
+# secondaryBackgroundColor = "#F698A3"  # Light pink
+# textColor = "#6E0404"  # Dark red
+# font = "sans serif"
