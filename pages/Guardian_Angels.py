@@ -5,6 +5,7 @@ st.markdown("<h3 style='text-align: center; color: pink'>Meet your angels!</h2>"
 
 st.markdown("<p style='text-align: center; margin-bottom: 0.01em; color: pink'>Your primary angels are marked with a 💖</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; margin-top: 0.01em; color: pink'>All other angels are 🪽</p>", unsafe_allow_html=True)
+
 #end of my code
 
 #start of Gemini code
@@ -25,8 +26,8 @@ if 'new_angel_distance' not in st.session_state:
     st.session_state.new_angel_distance = ""
 
 # Input fields for adding a new angel
-new_angel_name = st.text_input("Angel Name", key="angel_name", value=st.session_state.new_angel_name)
-new_angel_distance = st.text_input("Distance (km)", key="angel_distance", value=st.session_state.new_angel_distance)
+new_angel_name = st.text_input("Angel Name", placeholder= "Add name of your angel here", key="angel_name", value=st.session_state.new_angel_name)
+new_angel_distance = st.text_input("Distance (km)", placeholder= "Real-time location updates will be functional soon, so stay on the lookout for updates!", key="angel_distance", value=st.session_state.new_angel_distance)
 
 # Add button style
 st.markdown(
@@ -78,3 +79,5 @@ with st.container():
     for angel_button in st.session_state.angel_buttons:
         st.button(angel_button)
     st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown("<p style='text-align: center; margin-top: 0.01em; color: pink'>Coming soon: Click on an angel to find them on the map!.</p>", unsafe_allow_html=True)

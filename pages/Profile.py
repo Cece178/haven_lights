@@ -10,6 +10,4 @@ if st.button("Save"):
     st.write(f"Name: {name}")
     st.write(f"Email: {email}")
     st.write(f"Phone Number: {phone_number}")
-    # In a real application, you would securely store the password
-    # and handle password confirmation.
     st.markdown("<h5>Information Saved!</p>", unsafe_allow_html=True)

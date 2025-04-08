@@ -11,11 +11,14 @@ if st.session_state.current_page == "Home_app":
     with col2:
         st.markdown("<h1 style= 'text-align: center;'>💖Welcome!💖</h1>", unsafe_allow_html=True) 
         st.image("images/Haven_App_Logo_-_Technovations.png", width=320)
+        st.markdown("<h5 style= 'text-align: center;'>Example Videos (more coming soon!)</h1>", unsafe_allow_html=True)
 elif st.session_state.current_page == "profile":
     st.write("Welcome to the Profile Page!")
 
+#my code
 st.video("videos/IMG_2862.MOV", loop=True, autoplay=True, end_time=8)
 st.video("videos/IMG_2864.MOV", loop=True, end_time=3)
+#end of my code
 
 if "current_page" not in st.session_state:
     st.session_state.current_page = "home"
