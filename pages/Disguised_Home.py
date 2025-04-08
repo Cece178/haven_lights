@@ -1,5 +1,8 @@
 import streamlit as st
 
+if st.button("🪙", type = 'tertiary'):
+    st.switch_page("Home_app.py")
+
 st.markdown("<h1 style='text-align: center;'>💤Haven Sleepwear💤</h1>", unsafe_allow_html=True)
 
 st.markdown('<h4 style="text-align: center; color: pink">Sleep Like A Baby Collection</p>', unsafe_allow_html=True)
@@ -44,3 +47,5 @@ cols[1].image('images/pajama3.jpg')
 cols[2].image('images/pajama4.jpg')
 cols[3].image('images/pajama5.jpg')
 cols[4].image('images/pajama.jpg')
+
+

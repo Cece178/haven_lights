@@ -5,11 +5,10 @@ st.markdown("<h1 style='text-align: center;'>💬 Talk To Your Angels 💬</h1>"
 
 with st.container():
     st.markdown('<div class="button-container">', unsafe_allow_html=True) 
-    st.button("Selene💖") 
-    st.button("Dad💖")
-    st.button("Mom💖")
-    st.button("Leah🪽")
-    st.button(" Add another angel☁️") 
+    st.button("Selene💖", use_container_width=True) 
+    st.button("Dad💖", use_container_width=True)
+    st.button("Mom💖", use_container_width=True)
+    st.button("Leah🪽", use_container_width=True)
     st.markdown('</div>', unsafe_allow_html=True) 
 
 
