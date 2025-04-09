@@ -3,7 +3,7 @@ import streamlit as st
 import time 
 
 #my code
-col1, col2 = st.columns([1, 2])  # Adjust column widths as needed
+col1, col2 = st.columns([1, 2])
 with col2:
     st.image("images/Haven_App_Logo_-_Technovations.png", width=200)
 #end of my code
@@ -15,7 +15,7 @@ if "start_time" not in st.session_state:
 if "timeout_expired" not in st.session_state:
     st.session_state.timeout_expired = False
 
-timeout_duration = 10 # reduce for testing
+timeout_duration = 30 # reduce for testing
 
 if st.session_state.start_time is None:
     st.session_state.start_time = time.time()
@@ -40,7 +40,7 @@ if not st.session_state.button_pressed and not st.session_state.timeout_expired:
         minutes = int(remaining_time // 60)
         seconds = int(remaining_time % 60)
         countdown_container.markdown(f"<h4 style='text-align: center; color: pink'>In <strong style='font-size: 36px; font-weight: bold'>{minutes:02d}:{seconds:02d}</strong> we will assume you are safe.</h4>", unsafe_allow_html=True)
-        time.sleep(1) #allows the user to see the countdown
+        time.sleep(1)
         remaining_time = timeout_duration - (time.time() - st.session_state.start_time)
 
     st.session_state.timeout_expired = True
@@ -50,7 +50,7 @@ if st.session_state.timeout_expired and not st.session_state.button_pressed:
     st.toast("YAY!", icon="🥳")
     st.balloons()
     st.markdown("<h4 style='text-align: center; color: pink'>We're glad you're safe! Please return to the homepage. Take care! <em style='font-size: 20px'>Love, the Haven Lights</em></h4>", unsafe_allow_html=True)
-    time.sleep(5)  # Wait for 2 seconds before redirecting
+    time.sleep(5) 
     st.switch_page("Home_app.py")
 
 if st.session_state.button_pressed:

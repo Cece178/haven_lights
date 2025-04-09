@@ -1,13 +1,15 @@
+#my code
 import streamlit as st
 
 if st.button("🪙", type = 'tertiary'):
     st.switch_page("Home_app.py")
 
+st.toast("Updates coming soon to this page!", icon="✨")
+st.toast("Click the coin on the left side of the page for a quick way to leave the diguise!", icon="ℹ️")
+
 st.markdown("<h1 style='text-align: center;'>💤Haven Sleepwear💤</h1>", unsafe_allow_html=True)
 
-st.markdown('<h4 style="text-align: center; color: pink">Sleep Like A Baby Collection</p>', unsafe_allow_html=True)
-
-
+st.markdown("<h4 style='text-align: center; color: pink; margin-bottom: 0.0001em'>Sleep Like A Baby Collection</p>", unsafe_allow_html=True)
 
 cols = st.columns(7)
 cols[0].button("Gowns")
@@ -47,5 +49,4 @@ cols[1].image('images/pajama3.jpg')
 cols[2].image('images/pajama4.jpg')
 cols[3].image('images/pajama5.jpg')
 cols[4].image('images/pajama.jpg')
-
 

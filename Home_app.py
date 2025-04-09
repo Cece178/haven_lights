@@ -7,7 +7,7 @@ if "current_page" not in st.session_state:
     st.session_state.current_page = "Home_app"
 
 if st.session_state.current_page == "Home_app":
-    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths as needed
+    col1, col2, col3 = st.columns([1, 2, 1]) 
     with col2:
         st.markdown("<h1 style= 'text-align: center;'>💖Welcome!💖</h1>", unsafe_allow_html=True) 
         st.image("images/Haven_App_Logo_-_Technovations.png", width=320)
@@ -25,7 +25,7 @@ if "current_page" not in st.session_state:
 
 # Redirect to the selected page
 if st.session_state.current_page == "map":
-    params = st.query_params  # Get current query parameters as a dictionary
-    params["page"] = "map"  # Update the 'page' parameter
-    st.query_params = params  # Set the query parameters
+    params = st.query_params 
+    params["page"] = "map"
+    st.query_params = params 
     st.stop()

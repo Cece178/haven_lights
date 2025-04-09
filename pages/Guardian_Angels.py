@@ -5,12 +5,9 @@ st.markdown("<h3 style='text-align: center; color: pink'>Meet your angels!</h2>"
 
 st.markdown("<p style='text-align: center; margin-bottom: 0.01em; color: pink'>Your primary angels are marked with a 💖</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; margin-top: 0.01em; color: pink'>All other angels are 🪽</p>", unsafe_allow_html=True)
-
 #end of my code
 
 #start of Gemini code
-
-# Initialize session state for angel buttons
 if 'angel_buttons' not in st.session_state:
     st.session_state.angel_buttons = [
         "Selene💖 ––→  3km away",
@@ -19,17 +16,14 @@ if 'angel_buttons' not in st.session_state:
         "Leah🪽 ––→  2km away"
     ]
 
-# Initialize session state for input fields
 if 'new_angel_name' not in st.session_state:
     st.session_state.new_angel_name = ""
 if 'new_angel_distance' not in st.session_state:
     st.session_state.new_angel_distance = ""
 
-# Input fields for adding a new angel
 new_angel_name = st.text_input("Angel Name", placeholder= "Add name of your angel here", key="angel_name", value=st.session_state.new_angel_name)
 new_angel_distance = st.text_input("Distance (km)", placeholder= "Real-time location updates will be functional soon, so stay on the lookout for updates!", key="angel_distance", value=st.session_state.new_angel_distance)
 
-# Add button style
 st.markdown(
     """
     <style>
@@ -42,7 +36,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Add button container style
 st.markdown(
     """
     <style>
@@ -61,7 +54,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Function to add a new angel button
 def add_angel():
     if new_angel_name and new_angel_distance:
         new_angel_button = f"{new_angel_name}🪽 ––→  {new_angel_distance}km away"
@@ -69,12 +61,10 @@ def add_angel():
         st.session_state.new_angel_name = ""
         st.session_state.new_angel_distance = ""
 
-# Add button to add a new angel
 if st.button("Add angel☁️", on_click=add_angel):
     pass
     st.toast("Angel added!", icon="💖")
 
-# Display angel buttons in a container
 with st.container():
     st.markdown('<div class="button-container">', unsafe_allow_html=True)
     for angel_button in st.session_state.angel_buttons:
