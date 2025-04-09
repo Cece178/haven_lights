@@ -1,4 +1,3 @@
-
 #my code with guidance from Gemini Copilot
 import streamlit as st
 import time 
@@ -16,7 +15,7 @@ if "start_time" not in st.session_state:
 if "timeout_expired" not in st.session_state:
     st.session_state.timeout_expired = False
 
-timeout_duration = 30 # reduce for testing
+timeout_duration = 10 # reduce for testing
 
 if st.session_state.start_time is None:
     st.session_state.start_time = time.time()
@@ -48,9 +47,10 @@ if not st.session_state.button_pressed and not st.session_state.timeout_expired:
     st.rerun()
 
 if st.session_state.timeout_expired and not st.session_state.button_pressed:
+    st.toast("YAY!", icon="🥳")
+    st.balloons()
     st.markdown("<h4 style='text-align: center; color: pink'>We're glad you're safe! Please return to the homepage. Take care! <em style='font-size: 20px'>Love, the Haven Lights</em></h4>", unsafe_allow_html=True)
-    st.image("images/Haven_App_Logo_-_Technovations.png")
-    time.sleep(2)  # Wait for 2 seconds before redirecting
+    time.sleep(5)  # Wait for 2 seconds before redirecting
     st.switch_page("Home_app.py")
 
 if st.session_state.button_pressed:

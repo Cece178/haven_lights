@@ -9,7 +9,7 @@ st.markdown("<h1 style= 'text-align: center; margin-bottom: 0.01em'>🗺️   Ma
 st.markdown("<p style= 'text-align: center; color: pink; margin-bottom: 2em'>Your safe spots will be displayed like this:☁️</p>", unsafe_allow_html=True)
 #end of my code
 
-#Gemini Code
+# Gemini Code
 # Default Location (Queenstown, New Zealand)
 default_latitude = -45.031162
 default_longitude = 168.662643
@@ -21,15 +21,19 @@ geolocator = Nominatim(user_agent="haven_lights_app")  # Replace with your app n
 if "pinned_locations" not in st.session_state:
     st.session_state.pinned_locations = []
 
-# Create a Folium map
-m = folium.Map(location=[default_latitude, default_longitude], zoom_start=12)
+# Create a Folium map in session state if it doesn't exist
+if "map" not in st.session_state:
+    st.session_state.map = folium.Map(location=[default_latitude, default_longitude], zoom_start=12)
 
-# Add a marker for the default location with a custom icon
-folium.Marker(
-    [default_latitude, default_longitude],
-    popup="Queenstown",
-    icon=folium.Icon(color="red", icon="info-sign"),  # Customize the icon here
-).add_to(m)
+    # Add a marker for the default location with a custom icon
+    folium.Marker(
+        [default_latitude, default_longitude],
+        popup="Queenstown",
+        icon=folium.Icon(color="red", icon="info-sign"),  # Customize the icon here
+    ).add_to(st.session_state.map)
+
+# Get the map from session state
+m = st.session_state.map
 
 # Address Input
 address = st.text_input("Enter Address of Your Safe Spot!", placeholder="Safe spot address goes here...", key="address")
@@ -44,7 +48,7 @@ if address:
 
             # Add the new location to the session state
             st.session_state.pinned_locations.append({"address": address, "latitude": latitude, "longitude": longitude})
-
+            st.toast("Safe spot added!", icon="☁️")
             # Add a marker for the entered address with a custom icon
             folium.Marker(
                 [latitude, longitude],
@@ -52,7 +56,7 @@ if address:
                 icon=folium.Icon(color="pink", icon="cloud"),  # Customize the icon here
             ).add_to(m)
 
-            # Center the map on the new location
+            # Center the map on the new location (optional)
             m.location = [latitude, longitude]
             m.zoom_start = 12  # Adjust zoom level as needed
         else:

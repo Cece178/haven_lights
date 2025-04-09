@@ -72,6 +72,7 @@ def add_angel():
 # Add button to add a new angel
 if st.button("Add angel☁️", on_click=add_angel):
     pass
+    st.toast("Angel added!", icon="💖")
 
 # Display angel buttons in a container
 with st.container():
@@ -80,4 +81,4 @@ with st.container():
         st.button(angel_button)
     st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown("<p style='text-align: center; margin-top: 0.01em; color: pink'>Coming soon: Click on an angel to find them on the map!.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; margin-top: 0.01em; color: pink'>Coming soon: Click on an angel to find them on the map!</p>", unsafe_allow_html=True)
