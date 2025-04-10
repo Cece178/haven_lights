@@ -18,7 +18,8 @@ elif st.session_state.current_page == "profile":
     st.write("Welcome to the Profile Page!")
 
 #my code
-st.video("videos/IMG_2862.MOV", loop=True, autoplay=True, end_time=8)
+st.video("videos/IMG_2235 (1).MOV", loop=True, autoplay=True)
+st.video("videos/IMG_2862.MOV", loop=True, end_time=8)
 st.video("videos/IMG_2864.MOV", loop=True, end_time=3)
 #end of my code
 
