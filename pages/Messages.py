@@ -1,5 +1,9 @@
 #my code
 import streamlit as st
+st.set_page_config(page_title="Messages - Haven", page_icon="💗")
+
+
+st.toast("This feature is coming soon! In the meantime, take a look at the example conversations below. Simply click the names!", icon="ℹ️")
 
 st.markdown("<h1 style='text-align: center;'>💬 Talk To Your Angels 💬</h1>", unsafe_allow_html=True) 
 

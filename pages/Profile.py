@@ -1,5 +1,9 @@
 #guided by Gemini
 import streamlit as st
+st.set_page_config(page_title="Profile - Haven", page_icon="💗")
+
+
+st.toast("A basic profile page! This information will be used in the future when texting and locations are functional!", icon="ℹ️")
 
 st.markdown("<h1 style='text-align: center;'>🥸 Profile 🥸</h1>", unsafe_allow_html=True)
 

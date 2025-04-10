@@ -1,8 +1,11 @@
 #my code with guidance from Gemini Copilot
 import streamlit as st
 import time 
+st.set_page_config(page_title="Panic - Haven", page_icon="💗")
 
 #my code
+st.toast("In the future, alerts will be sent to your guardian angels. Reload the page to reset the countown timer!", icon="ℹ️")
+
 col1, col2 = st.columns([1, 2])
 with col2:
     st.image("images/Haven_App_Logo_-_Technovations.png", width=200)
@@ -56,7 +59,8 @@ if st.session_state.timeout_expired and not st.session_state.button_pressed:
 if st.session_state.button_pressed:
     st.markdown("<h4 style= 'text-align: center;'>Try not to engage unless necessary, it's best to avoid any confrontation. We have alerted your angels. Do you wish to alert the police? (Police alerts coming soon to the app!)</p>", unsafe_allow_html=True)
     if st.button("Please alert the police! I don't feel safe.", use_container_width= True):
-        st.markdown("<h6 style= 'text-align: center;'>(Feature coming soon) We have alerted the police and sent them your location. Please stay aware of your surroundings. </h6>", unsafe_allow_html=True)
+        st.markdown("<h6 style= 'text-align: center;'>We have alerted the police and sent them your location. Please stay aware of your surroundings. </h6>", unsafe_allow_html=True)
+        st.toast("Alerting the police is a future feature. Stay tuned!", icon="ℹ️")
     #code from https://www.youtube.com/watch?v=UnjaSkrfWOs 
     audio_value = st.audio_input("Please start the recording by pressing the microphone")
     if audio_value:

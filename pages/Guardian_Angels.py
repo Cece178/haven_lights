@@ -1,5 +1,7 @@
 import streamlit as st #start of my code (with some guidance from Gemini)
+st.set_page_config(page_title="Guardian Angels - Haven", page_icon="💗")
 
+st.toast("Type the name of your angel and their distance from you! In the future, we will update this to show real-time location updates!", icon="ℹ️")
 st.markdown("<h1 style='text-align: center; margin-bottom: 0.001em'>😇Your Guardian Angels😇</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: pink'>Meet your angels!</h2>", unsafe_allow_html=True)
 

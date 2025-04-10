@@ -1,11 +1,13 @@
 #my code
 import streamlit as st
+st.set_page_config(page_title="Haven Sleepwear", page_icon="💗")
+
 
 if st.button("🪙", type = 'tertiary'):
     st.switch_page("Home_app.py")
 
 st.toast("Updates coming soon to this page!", icon="✨")
-st.toast("Click the coin on the left side of the page for a quick way to leave the diguise!", icon="ℹ️")
+st.toast("Click the coin on the left side of the page for a quick way to leave the diguised home page!", icon="ℹ️")
 
 st.markdown("<h1 style='text-align: center;'>💤Haven Sleepwear💤</h1>", unsafe_allow_html=True)
 

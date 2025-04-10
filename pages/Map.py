@@ -4,6 +4,10 @@ import folium
 from streamlit_folium import folium_static
 from geopy.geocoders import Nominatim
 
+st.set_page_config(page_title="Map - Haven", page_icon="💗")
+
+st.toast("Type in the address of your safe spot to pin it on the map! Soon you will also be able to see your location updated in real time, as well as the locations of your angels!", icon="ℹ️")
+
 #my code
 st.markdown("<h1 style= 'text-align: center; margin-bottom: 0.01em'>🗺️   Map   🗺️</h1>", unsafe_allow_html=True)
 st.markdown("<p style= 'text-align: center; color: pink; margin-bottom: 2em'>Your safe spots will be displayed like this:☁️</p>", unsafe_allow_html=True)

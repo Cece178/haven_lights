@@ -2,6 +2,8 @@
 import streamlit as st
 st.set_page_config(page_title="Haven", page_icon="💗")
 
+st.toast("We're glad you're here! Take a look at the example self defense videos. More videos coming soon!", icon="ℹ️")
+
 #gemini navgiation suggestion:
 if "current_page" not in st.session_state:
     st.session_state.current_page = "Home_app"
